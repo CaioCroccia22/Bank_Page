@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-content{
+    border: black solid 2px;
+    height: 500px;
+    width: 400px;
+    margin: 150px 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+form input{
+    padding: 5px;
+    margin: 5px;
+
+}
+
+form label{
+    padding: 10px;
+}
