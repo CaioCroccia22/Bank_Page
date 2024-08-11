@@ -36,3 +36,10 @@ form input{
 form label{
     padding: 10px;
 }
+
+.sucess-message {
+    background-color: #27ae66;
+    padding: 16px;
+    color: #fff;
+    
+}
