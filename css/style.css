@@ -5,7 +5,6 @@
 }
 
 .main-content{
-    border: black solid 2px;
     height: 600px;
     width: 400px;
     margin: 150px 600px;
@@ -52,6 +51,17 @@ form label{
     color: #fff;
     margin: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    align-items: center;
     text-align: center;
+    display: none;
+}
+
+.error-message{
+    padding: 5px;
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    margin: 10px;
+    display: none;
 }
