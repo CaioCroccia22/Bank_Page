@@ -1,4 +1,6 @@
 const form = document.getElementById('form-deposito');
+const nomeBeneficiario = document.getElementById('nome_beneficiario');
+let formValido = false;
 
 function validaNome(nomeCompleto){
     const NomeComoArray = nomeCompleto.split(' ');
@@ -7,9 +9,9 @@ function validaNome(nomeCompleto){
 
 
 form.addEventListener('submit', function(e){
-    let formValido = false;
+    
     e.preventDefault();
-    const nomeBeneficiario = document.getElementById('nome_beneficiario');
+    
     const numeroContaBeneficiario = document.getElementById('number_account');
     const valorDeposito = document.getElementById('valor-deposito');
     const mensagemSucesso = `Montante de: <b>${valorDeposito.value}</b> depositado para o cliente: <b>${nomeBeneficiario.value}</b> - conta <b>${numeroContaBeneficiario.value}</b>`;
@@ -34,3 +36,17 @@ form.addEventListener('submit', function(e){
         }
 });
 
+nomeBeneficiario.addEventListener('keyup', function(e){
+    console.log(e.target.value);
+    formValido = validaNome(e.target.value);
+        if (!formValido){
+            
+            nomeBeneficiario.style.border = '1px solid red';
+            document.querySelector('.error-message').style.display = 'block';
+            
+        }
+        else{
+            nomeBeneficiario.style.border = 'none';
+            document.querySelector('.error-message').style.display = 'none';
+        }
+})
